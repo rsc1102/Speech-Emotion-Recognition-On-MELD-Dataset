@@ -4,15 +4,16 @@ This repository is for speech emotion recognition for MELD: A Multimodal Multi-P
 ## Results:
 | Model  | Val Accuracy |
 | ------------- | ------------- |
-| 2D CNN & 1D CNN ensemble  | 33.13253012048193 |
-|  2D CNN & 1D CNN with GRUs | 21.80722891566265 |
-| Bi-LSTM|39.277108433734945|
-|Bi-GRU| 40.0|
+|2D CNN|43.253 |
+| 2D CNN & 1D CNN ensemble  | 33.132|
+|  2D CNN & 1D CNN with GRUs | 21.807 |
+| Bi-LSTM| 40.0|
+|Bi-GRU|38.915|
 
 
 
 ## Features:
-I have used LibROSA to get Mel-frequency cepstral coefficients(MFCCs) of each audio file. 
+I have used LibROSA to get Mel-frequency cepstral coefficients(MFCCs) of each audio file. The MFCCs are of the form of 2D numpy arrays. I have also calculated the mean values of the MFCC numpy arrays to get additional features to be used by 1D CNNs. 
 
 ## Dataset:
 The dataset is a collection of audio files with over 8000 utterances/phrases/conversations from the TV sitcom "Friends".
@@ -28,5 +29,32 @@ The dataset is a collection of audio files with over 8000 utterances/phrases/con
 * Dataset is very small for properly understanding more nuanced emotions such as 'Disgust' and 'Fear'.
 
 ### Compensatory measures to deal with dataset issues:
+* Choosing a smaller training set. But this has problem of missing out on much of the available data resource. I have used a dataset with maximum limit of 1000 data points per class as my training dataset.
+* Using data augmentaion to increase dataset size. Since my dataset shrunk in size while trying to compensate for data imbalance, it was neccessary to increase my dataset size using data augmentaion techniques. I have used adding noise and random shifting data augmentaion techniques. 
+
+## Models Used:
+### 2D CNN:
+It is a basic model which simply takes the MFCCs and performs 2D convolutions on it, flattens it and reduces the linear layer to the number of label categories. Such structure is usually used for audio classification tasks. It performs well on the validation set, however it overwhelmingly predicts 'Neutral' class.
+
+![alt text](https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/2DCNN.JPG)
+
+### 1D CNN:
+It is an even simpler model than 2D CNN and relies on the mean values of MFCC numpy arrays to be its features. 
+
+### Bi-LSTM
+The Bi-LSTM model was also tested with MFCC features. 
+
+![alt text](https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/BiLSTM.JPG)
+
+### Bi-GRU
+The Bi-GRU model was also tested with MFCC features.  
+![alt text](https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/BiGRU.JPG)
+
+
+# Citations:
+S. Poria, D. Hazarika, N. Majumder, G. Naik, E. Cambria, R. Mihalcea. MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversation. ACL 2019.
+
+Chen, S.Y., Hsu, C.C., Kuo, C.C. and Ku, L.W. EmotionLines: An Emotion Corpus of Multi-Party Conversations. arXiv preprint arXiv:1802.08379 (2018).
+
 
 
