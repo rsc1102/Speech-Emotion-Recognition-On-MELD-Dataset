@@ -5,7 +5,7 @@ This repository is for speech emotion recognition for MELD: A Multimodal Multi-P
 | Model  | Val Accuracy |
 | ------------- | ------------- |
 |2D CNN|43.253 |
-| 2D CNN & 1D CNN ensemble  | 33.132|
+| 2D CNN & 1D CNN ensemble  | 48.313|
 |  2D CNN & 1D CNN with GRUs |51.927|
 | Bi-LSTM| 40.0|
 |Bi-GRU|38.915|
@@ -49,6 +49,16 @@ The Bi-LSTM model was also tested with MFCC features.
 ### Bi-GRU
 The Bi-GRU model was also tested with MFCC features.  
 <img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/BiGRU.JPG" width = 500> 
+
+### 2D CNN 1D CNN Ensemble:
+The model is a 2D CNN structure with 1D CNN structure in parallel. This model was tested to improve upon the results obtained from either of the simpler models.
+<img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/CNN_1d_2d.JPG" width = 500> 
+
+
+### 2D CNN 1D CNN Bi-GRU Ensemble:
+The model is a 2D CNN structure with 1D CNN structure in parallel, both CNN structures are followed by Bi-GRUs. This model was tested to improve upon the results obtained from either of the simpler models.
+
+<img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/CNN_GRU.JPG" width = 500> 
 
 # Citations:
 S. Poria, D. Hazarika, N. Majumder, G. Naik, E. Cambria, R. Mihalcea. MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversation. ACL 2019.
