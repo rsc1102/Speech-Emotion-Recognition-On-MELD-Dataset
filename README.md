@@ -5,11 +5,9 @@ This repository is for speech emotion recognition for MELD: A Multimodal Multi-P
 | Model  | Val Accuracy |
 | ------------- | ------------- |
 |2D CNN|43.253 |
-|1D CNN |      |
-| 2D CNN & 1D CNN ensemble  | 48.313|
+|1D CNN | 56.024 |
+| 2D CNN & 1D CNN ensemble  | 44.337|
 |  2D CNN & 1D CNN with GRUs |51.927|
-|  2D CNN & 1D CNN with BiGRUs |51.927|
-
 | Bi-LSTM| 40.0|
 |Bi-GRU|38.915|
 
@@ -42,22 +40,26 @@ It is a basic model which simply takes the MFCCs and performs 2D convolutions on
  <img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/2DCNN.JPG" width = 500> 
  
 ### 1D CNN:
-It is an even simpler model than 2D CNN and relies on the mean values of MFCC numpy arrays to be its features. 
+It is an even simpler model than 2D CNN and relies on the mean values of MFCC numpy arrays to be its features. Despite its simple structure it performed the best out of all the model I tested. However this might change if more training data is used.
+
+<img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/1DCNN.JPG" width = 500> 
+ 
 
 ### Bi-LSTM
-The Bi-LSTM model was also tested with MFCC features. 
+The Bi-LSTM model was also tested with MFCC features. The model performs poorly due to lack of sufficient training data.
 <img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/BiLSTM.JPG" width = 500> 
 
 ### Bi-GRU
-The Bi-GRU model was also tested with MFCC features.  
+The Bi-GRU model was also tested with MFCC features. The model performs poorly due to lack of sufficient training data.
 <img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/BiGRU.JPG" width = 500> 
 
 ### 2D CNN 1D CNN Ensemble:
 The model is a 2D CNN structure with 1D CNN structure in parallel. This model was tested to improve upon the results obtained from either of the simpler models.
+<img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/CNN_1d_2d.JPG" width = 500>
 
 
 ### 2D CNN 1D CNN GRU Ensemble:
-The model is a 2D CNN structure with 1D CNN structure in parallel, both CNN structures are followed by GRUs. This model was tested to improve upon the results obtained from either of the simpler models.
+The model is a 2D CNN structure with 1D CNN structure in parallel, both CNN structures are followed by GRUs. This model was tested to improve upon the results obtained from either of the simpler models. Model performance is worse than 1D CNN, however that would change if more data is used for training.
 
 <img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/CNN_GRU.JPG" width = 500> 
 
