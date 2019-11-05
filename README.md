@@ -6,7 +6,7 @@ This repository is for speech emotion recognition for MELD: A Multimodal Multi-P
 | ------------- | ------------- |
 |2D CNN|43.253 |
 | 2D CNN & 1D CNN ensemble  | 33.132|
-|  2D CNN & 1D CNN with GRUs | 21.807 |
+|  2D CNN & 1D CNN with GRUs |51.927|
 | Bi-LSTM| 40.0|
 |Bi-GRU|38.915|
 
@@ -36,8 +36,8 @@ The dataset is a collection of audio files with over 8000 utterances/phrases/con
 ### 2D CNN:
 It is a basic model which simply takes the MFCCs and performs 2D convolutions on it, flattens it and reduces the linear layer to the number of label categories. Such structure is usually used for audio classification tasks. It performs well on the validation set, however it overwhelmingly predicts 'Neutral' class.
 
-![alt text](https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/2DCNN.JPG)
 
+ <img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/2DCNN.JPG" width = 400> 
 ### 1D CNN:
 It is an even simpler model than 2D CNN and relies on the mean values of MFCC numpy arrays to be its features. 
 
