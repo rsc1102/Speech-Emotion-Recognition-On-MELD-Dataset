@@ -14,7 +14,7 @@ I have used LibROSA to get Mel-frequency cepstral coefficients(MFCCs) of each au
 ## Dataset:
 The dataset is a collection of audio files with over 8000 utterances/phrases/conversations from the TV sitcom "Friends".
 |Dataset |	Disgust |	Fear |	Happy |	Neutral |	Sad |	Total |
-| ------------- | ------------- || ------------- | ------------- || ------------- | ------------- || ------------- | 
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | 
 |Training set| 	232 |	216 |	1609 |	4592 |	705 |	7354 |
-| ------------- | ------------- || ------------- | ------------- || ------------- | ------------- || ------------- | 
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | 
 |Validation set |	28 |	25 |	181 |	517 |	79 |	830 |
