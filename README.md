@@ -37,19 +37,18 @@ The dataset is a collection of audio files with over 8000 utterances/phrases/con
 It is a basic model which simply takes the MFCCs and performs 2D convolutions on it, flattens it and reduces the linear layer to the number of label categories. Such structure is usually used for audio classification tasks. It performs well on the validation set, however it overwhelmingly predicts 'Neutral' class.
 
 
- <img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/2DCNN.JPG" width = 400> 
+ <img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/2DCNN.JPG" width = 500> 
+ 
 ### 1D CNN:
 It is an even simpler model than 2D CNN and relies on the mean values of MFCC numpy arrays to be its features. 
 
 ### Bi-LSTM
 The Bi-LSTM model was also tested with MFCC features. 
-
-![alt text](https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/BiLSTM.JPG)
+<img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/BiLSTM.JPG" width = 500> 
 
 ### Bi-GRU
 The Bi-GRU model was also tested with MFCC features.  
-![alt text](https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/BiGRU.JPG)
-
+<img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/BiGRU.JPG" width = 500> 
 
 # Citations:
 S. Poria, D. Hazarika, N. Majumder, G. Naik, E. Cambria, R. Mihalcea. MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversation. ACL 2019.
