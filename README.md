@@ -1,5 +1,10 @@
 # Speech-Emotion-Recognition-On-MELD-Dataset
-This repository is for speech emotion recognition for MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversation
+This repository is for speech emotion recognition for MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversation.
+The repository contains three jupyter notebooks
+* create_labels.ipynb
+* create_MFCC_dictionary(1).ipynb
+* MAIN.ipynb
+The top two are for data preprocessing while the MAIN.ipynb is the notebook for training the models.
 
 ## Results:
 | Model  | Val Accuracy |
