@@ -68,6 +68,12 @@ The model is a 2D CNN structure with a 1D CNN structure in parallel, both CNN st
 
 <img src="https://github.com/Azithral/Speech-Emotion-Recognition-On-MELD-Dataset/blob/master/Images/CNN_GRU.JPG" width = 500> 
 
+# Take aways:
+* Despite having maximum validation accuracy, 1D CNNs fail to recognize emotions such as sadness, fear and disgust. Their simple structure might be limiting their understanding of these complex emotions.
+* None of the models I tested were able to identify the fear. This might be due to the complexity of fear emotion being higher than what the models can reasonably comprehend based on features extracted from the available dataset. 
+* Proper preprocessing was not possible due to the presence of background laughter in the audio clips.
+* The models are extremely sensitive to hyper parameters and can show varying accuracy results based on the test dataset.
+
 # Citations:
 S. Poria, D. Hazarika, N. Majumder, G. Naik, E. Cambria, R. Mihalcea. MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversation. ACL 2019.
 
