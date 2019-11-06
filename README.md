@@ -10,13 +10,14 @@ The top two are for data preprocessing while the MAIN.ipynb is the notebook for 
 ## Usage:
 
 * Clone the repository on your system
-* Create a virtual env
+* Create a virtual environment
 * Install the requirements using the requirements.txt
-* Run either testing_function.py for evaluation.
+* Download the weights named '2DCNN_1DCNN_GRU.pth' and store them in the model_weights_directory.
+* Run testing_function.py for evaluation.
 * The code takes command line input of the form: 
 
 ` python3 testing_function.py audio_files_directory model_weights_directory`
-* The outputfile will be in the current directory and is named output.txt
+* The output file will be in the current directory and is named output.txt
 
 
 ## Results:
