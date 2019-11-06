@@ -14,8 +14,9 @@ The top two are for data preprocessing while the MAIN.ipynb is the notebook for 
 * Install the requirements using the requirements.txt
 * Run either testing_function.py for evaluation.
 * The code takes command line input of the form: 
+
 ` python3 testing_function.py audio_files_directory model_weights_directory`
-* The code takes in the final test directory, as in, inside the test folder on .wav files should be present.
+* The outputfile will be in the current directory and is named output.txt
 
 
 ## Results:
